@@ -1,0 +1,56 @@
+C:\Users\Aamar_000\Documents\Visual Studio 2013\Projects\ProyectoFormar\Negocio\bin\Debug\Negocio.dll
+C:\Users\Aamar_000\Documents\Visual Studio 2013\Projects\ProyectoFormar\Negocio\bin\Debug\Negocio.pdb
+C:\Users\Aamar_000\Documents\Visual Studio 2013\Projects\ProyectoFormar\Negocio\bin\Debug\AccesoDatos.dll
+C:\Users\Aamar_000\Documents\Visual Studio 2013\Projects\ProyectoFormar\Negocio\bin\Debug\AccesoDatos.pdb
+C:\Users\Aamar_000\Documents\Visual Studio 2013\Projects\ProyectoFormar\Negocio\obj\Debug\Negocio.csprojResolveAssemblyReference.cache
+C:\Users\Aamar_000\Documents\Visual Studio 2013\Projects\ProyectoFormar\Negocio\obj\Debug\Negocio.dll
+C:\Users\Aamar_000\Documents\Visual Studio 2013\Projects\ProyectoFormar\Negocio\obj\Debug\Negocio.pdb
+C:\Users\Adrian Amaris\Documents\Visual Studio 2013\Projects\ProyectoFormar\Negocio\bin\Debug\Negocio.dll
+C:\Users\Adrian Amaris\Documents\Visual Studio 2013\Projects\ProyectoFormar\Negocio\bin\Debug\Negocio.pdb
+C:\Users\Adrian Amaris\Documents\Visual Studio 2013\Projects\ProyectoFormar\Negocio\bin\Debug\AccesoDatos.dll
+C:\Users\Adrian Amaris\Documents\Visual Studio 2013\Projects\ProyectoFormar\Negocio\bin\Debug\AccesoDatos.pdb
+C:\Users\Adrian Amaris\Documents\Visual Studio 2013\Projects\ProyectoFormar\Negocio\obj\Debug\Negocio.csprojResolveAssemblyReference.cache
+C:\Users\Adrian Amaris\Documents\Visual Studio 2013\Projects\ProyectoFormar\Negocio\obj\Debug\Negocio.dll
+C:\Users\Adrian Amaris\Documents\Visual Studio 2013\Projects\ProyectoFormar\Negocio\obj\Debug\Negocio.pdb
+H:\ProyectoFormar\Negocio\bin\Debug\Negocio.dll
+H:\ProyectoFormar\Negocio\bin\Debug\Negocio.pdb
+H:\ProyectoFormar\Negocio\bin\Debug\AccesoDatos.dll
+H:\ProyectoFormar\Negocio\bin\Debug\Microsoft.SqlServer.SQLTask.dll
+H:\ProyectoFormar\Negocio\bin\Debug\AccesoDatos.pdb
+H:\ProyectoFormar\Negocio\obj\Debug\Negocio.csprojResolveAssemblyReference.cache
+H:\ProyectoFormar\Negocio\obj\Debug\Negocio.dll
+H:\ProyectoFormar\Negocio\obj\Debug\Negocio.pdb
+C:\Users\HP\Desktop\ProyectoFormar\Negocio\bin\Debug\Negocio.dll
+C:\Users\HP\Desktop\ProyectoFormar\Negocio\bin\Debug\Negocio.pdb
+C:\Users\HP\Desktop\ProyectoFormar\Negocio\bin\Debug\AccesoDatos.dll
+C:\Users\HP\Desktop\ProyectoFormar\Negocio\bin\Debug\Microsoft.SqlServer.Management.CollectorTasks.dll
+C:\Users\HP\Desktop\ProyectoFormar\Negocio\bin\Debug\Microsoft.SqlServer.Smo.dll
+C:\Users\HP\Desktop\ProyectoFormar\Negocio\bin\Debug\Microsoft.SqlServer.SQLTask.dll
+C:\Users\HP\Desktop\ProyectoFormar\Negocio\bin\Debug\Microsoft.SqlServer.Management.Sdk.Sfc.dll
+C:\Users\HP\Desktop\ProyectoFormar\Negocio\bin\Debug\Microsoft.SqlServer.ConnectionInfo.dll
+C:\Users\HP\Desktop\ProyectoFormar\Negocio\bin\Debug\Microsoft.SqlServer.SqlEnum.dll
+C:\Users\HP\Desktop\ProyectoFormar\Negocio\bin\Debug\Microsoft.SqlServer.Dmf.dll
+C:\Users\HP\Desktop\ProyectoFormar\Negocio\bin\Debug\Microsoft.SqlServer.ServiceBrokerEnum.dll
+C:\Users\HP\Desktop\ProyectoFormar\Negocio\bin\Debug\AccesoDatos.pdb
+C:\Users\HP\Desktop\ProyectoFormar\Negocio\bin\Debug\es\Microsoft.SqlServer.Management.CollectorTasks.resources.dll
+C:\Users\HP\Desktop\ProyectoFormar\Negocio\bin\Debug\es\Microsoft.SqlServer.Management.Sdk.Sfc.resources.dll
+C:\Users\HP\Desktop\ProyectoFormar\Negocio\bin\Debug\es\Microsoft.SqlServer.Dmf.resources.dll
+C:\Users\HP\Desktop\ProyectoFormar\Negocio\obj\Debug\Negocio.csprojResolveAssemblyReference.cache
+C:\Users\HP\Desktop\ProyectoFormar\Negocio\obj\Debug\Negocio.dll
+C:\Users\HP\Desktop\ProyectoFormar\Negocio\obj\Debug\Negocio.pdb
+C:\Users\Adrian Amaris\Desktop\ProyectoFormar\Negocio\bin\Debug\Negocio.dll
+C:\Users\Adrian Amaris\Desktop\ProyectoFormar\Negocio\bin\Debug\Negocio.pdb
+C:\Users\Adrian Amaris\Desktop\ProyectoFormar\Negocio\bin\Debug\AccesoDatos.dll
+C:\Users\Adrian Amaris\Desktop\ProyectoFormar\Negocio\bin\Debug\AccesoDatos.pdb
+C:\Users\Adrian Amaris\Desktop\ProyectoFormar\Negocio\obj\Debug\Negocio.csprojResolveAssemblyReference.cache
+C:\Users\Adrian Amaris\Desktop\ProyectoFormar\Negocio\obj\Debug\Negocio.dll
+C:\Users\Adrian Amaris\Desktop\ProyectoFormar\Negocio\obj\Debug\Negocio.pdb
+C:\Users\Adrian Amaris\Desktop\ProyectoFormar\Negocio\bin\Debug\Microsoft.SqlServer.Smo.dll
+C:\Users\Adrian Amaris\Desktop\ProyectoFormar\Negocio\bin\Debug\Microsoft.SqlServer.Management.Sdk.Sfc.dll
+C:\Users\Adrian Amaris\Desktop\ProyectoFormar\Negocio\bin\Debug\Microsoft.SqlServer.ConnectionInfo.dll
+C:\Users\Adrian Amaris\Desktop\ProyectoFormar\Negocio\bin\Debug\Microsoft.SqlServer.SqlEnum.dll
+C:\Users\Adrian Amaris\Desktop\ProyectoFormar\Negocio\bin\Debug\Microsoft.SqlServer.Dmf.dll
+C:\Users\Adrian Amaris\Desktop\ProyectoFormar\Negocio\bin\Debug\Microsoft.SqlServer.ServiceBrokerEnum.dll
+C:\Users\Adrian Amaris\Desktop\ProyectoFormar\Negocio\bin\Debug\es\Microsoft.SqlServer.Management.Sdk.Sfc.resources.dll
+C:\Users\Adrian Amaris\Desktop\ProyectoFormar\Negocio\bin\Debug\es\Microsoft.SqlServer.Dmf.resources.dll
+C:\Users\Adrian Amaris\Desktop\ProyectoFormar\Negocio\bin\Debug\Microsoft.SqlServer.SQLTask.dll

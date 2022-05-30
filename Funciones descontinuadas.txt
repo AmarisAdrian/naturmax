@@ -1,0 +1,166 @@
+----------------------------------------------------------------------------------------------
+Esto se coloca en el textboxt cantidad
+----------------------------------------------------------------------------------------------
+  double subtotal = 0;
+            double subtotalfinal = 0;
+            double iva = 0;
+            double ivatotal = 0;
+            double total = 0;
+            double totalfinal = 0;
+
+
+            TxtSubtotalFactura.Text = TxtprecioUnitario.Text;
+            if (Txtreferencia.Text == "")
+            {
+                Txtcantidad.Text = "0";
+            }
+            else if (Txtcantidad.Text == "")
+            {
+                Txttotaliva.Clear();
+                TxtSubtotalFactura.Clear();
+
+            }
+            else
+            {
+                subtotal = double.Parse(TxtSubtotalFactura.Text) * Convert.ToDouble(Txtcantidad.Text);
+                subtotalfinal = Convert.ToDouble(TxtprecioUnitario.Text) * Convert.ToDouble(Txtcantidad.Text);
+                iva = double.Parse(Txtiva.Text);
+                ivatotal = iva / 100;
+                total = ivatotal * subtotal;
+                totalfinal = total + subtotal;
+                TxtSubtotalFactura.Text = Convert.ToString(subtotalfinal);
+                Txttotaliva.Text = Convert.ToString(totalfinal);
+                Txttotalfactura.Text = Convert.ToString(total);
+            }
+
+
+------------------------------------------------------------------------------------------------------------------
+Sacar el total de la factura que se va a mostrar
+------------------------------------------------------------------------------------------------------
+
+
+ public void TotalViewFactura(DataGridView DgViewFactura, TextBox Txtreferencia, TextBox Txtproducto, TextBox Txtcantidad, TextBox TxtprecioUnitario,TextBox TxtSubtotalFactura, TextBox Txttotalfactura, TextBox Txtiva)
+        {
+            bool agregar = false;
+            int i = 0;
+            double Cantidad = 0;
+            double iva = 0;
+            double subtotal = 0;
+            double Totaliva;         
+            double total= 0;
+            try
+            {
+
+                while (DgViewFactura[0, i].Value != null)
+                {
+                    if (Convert.ToString(DgViewFactura[0, i].Value) == Convert.ToString(Txtreferencia.Text))
+                         {                   
+                            iva = double.Parse(Txtiva.Text);
+                            Totaliva = iva / 100;
+                            Cantidad = Convert.ToDouble(DgViewFactura[2, i].Value) + Convert.ToDouble(Txtcantidad.Text);
+                            subtotal = Convert.ToDouble(DgViewFactura[3, i].Value) * Convert.ToDouble(Cantidad);
+                            total = Convert.ToDouble(Totaliva) * Convert.ToDouble(subtotal);
+                            DgViewFactura[2, i].Value = Convert.ToString(Cantidad);
+                            TxtSubtotalFactura.Text = Convert.ToString(subtotal);
+                            DgViewFactura[4, i].Value = Convert.ToString(total);
+                            agregar = true;
+                        }
+                    i++;
+                }
+
+                if (agregar == false)
+                {
+
+                    DgViewFactura.Rows.Add(Txtreferencia,Txtproducto,Txtcantidad,TxtprecioUnitario,Txttotalfactura);
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+         
+        }
+
+----------------------------------------------------------------------------------------------------------------
+Valida el datagrid de la factura que se va guardar
+-----------------------------------------------------------------------------------------------------------------
+public void ValidarFacturaRepetida(DataGridView DgFactura, TextBox Txtnofac, TextBox TxtDocClienteFactura,TextBox Txtiva, TextBox TxtSubtotalFactura, TextBox Txttotalacomulado, DateTimePicker DtFechaFactura)
+        {
+            int i = 0;
+            bool permitir = false;
+            while (DgFactura[0, i].Value != null)
+            {
+                if (Convert.ToString(DgFactura[0, i].Value) == Convert.ToString(Txtnofac.Text))
+                {
+                    DgFactura[3, i].Value = TxtSubtotalFactura.Text;
+
+                    permitir = true;
+                }
+                i++;
+            }
+            if (permitir == false)
+            {
+                DgFactura.Rows.Add(Txtnofac.Text, TxtDocClienteFactura.Text, Txtiva.Text, TxtSubtotalFactura.Text, Txttotalacomulado, DtFechaFactura.Text);
+            }
+        }
+
+-------------------------------------------------------------------------------------------------------------------------
+Esta funcion recorre la ultima columna del datgrid para sacar el total
+-------------------------------------------------------------------------------------------------------------------------
+ public void TotalFactura(DataGridView DgViewFactura, TextBox TxtTotalFactura)
+        {
+            double total = 0;
+            foreach (DataGridViewRow row in DgViewFactura.Rows)
+            {
+                total += Convert.ToDouble(row.Cells["Totalview"].Value);
+            }
+            TxtTotalFactura.Text = Convert.ToString(total);
+        }
+--------------------------------------------------------------------------------------------------------------------------
+Funcion para mostrar el total de el datagrid a mostrar
+---------------------------------------------------------------------------------------------------------------------------
+     double total = 0;
+            int i = 0;
+            foreach (DataGridViewRow row in DGFACTURATOTAL.Rows)
+            {
+                total += Convert.ToDouble(row.Cells["Totalview"].Value);
+                DgFactura[4, 0].Value = Convert.ToString(total);
+                Txttotalacomulado.Text = Convert.ToString(DgFactura[4, i].Value);
+            }
+----------------------------------------------------------------------------------------------------------------------
+Cantidad para el detalle de la factura
+----------------------------------------------------------------------------------------------------------------------
+public void CantidadDetalleFactura(DataGridView DgDetallesFactura, TextBox Txtnofac, TextBox Txtreferencia, TextBox Txtmarca, TextBox Txtdescuento, TextBox TxtprecioUnitario, TextBox Txtcantidad)
+        {
+            int i = 0;
+            double Cantidad = 0;
+            bool permitir = false;
+            while (DgDetallesFactura[0, i].Value != null)
+            {
+                if (Convert.ToString(DgDetallesFactura[1, i].Value) == Convert.ToString(Txtreferencia.Text))
+                {
+                    Cantidad = Convert.ToDouble(DgDetallesFactura[5, i].Value) + Convert.ToDouble(Txtcantidad.Text);
+                    DgDetallesFactura[5, i].Value = Convert.ToString(Cantidad);
+                    permitir = true;
+                }
+                i++;
+            }
+            if (permitir == false)
+            {
+                DgDetallesFactura.Rows.Add(Txtnofac.Text, Txtreferencia.Text, Txtmarca.Text, Txtdescuento.Text, TxtprecioUnitario.Text, Txtcantidad.Text);
+            }
+}
+------------------------------------------------------------------------------------------------------------------------------------
+ Funcion descuento
+------------------------------------------------------------------------------------------------------------------------------------
+  double descuento;
+            double op;
+            double precioi;
+            double preciof;
+            double total;
+            descuento = Convert.ToDouble(TxtDescuento.Text);
+            precioi = Convert.ToDouble(TxtprecioUnitario.Text);
+            op = descuento / 100;
+            preciof = op * precioi;
+            total = precioi - preciof;
+            Txttotalfactura.Text = Convert.ToString(total);
