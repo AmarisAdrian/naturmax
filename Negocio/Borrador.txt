@@ -1,0 +1,85 @@
+﻿       GO
+CREATE TABLE PROVEEDOR(
+IDPROVEEDOR INT PRIMARY KEY,
+NOMBRE VARCHAR(50),
+DIRECCION VARCHAR(50),
+TELEFONO VARCHAR(20),
+EMAIL VARCHAR(20),
+RUT VARCHAR(50),
+NOMBRECONTACTO VARCHAR(50),
+TELEFONOCONTACTO INT,
+EMAILCONTACTO VARCHAR(20),
+CIUDAD VARCHAR(50),
+DEPARTAMENTO VARCHAR(50),
+
+);
+
+Actualizar Operarios//---------
+
+       if (TxtDocOperador.Text == "" || TxtUsernameOperador.Text == "" || TxtPasswordOperador.Text == "" || TxtNombresOperador.Text == "" || TxtApellidosOperador.Text == "" || CmbGeneroOperador.Text == "" || CmbEstadoOperador.Text == "" || CmbTipoOperador.Text == "" || TxtTelefonoOperador.Text == "" || TxtMovilOperador.Text == "" || TxtEmailOperador.Text == "" || TxtCiudadOperador.Text == "" || TxtDireccionOperador.Text == "")
+            {
+                MessageBox.Show("Hay campos vacios", " Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (Val.ValidarEmail(TxtEmailOperador.Text))
+            {
+                   usu.ActualizarOperario(Convert.ToString(TxtDocOperador.Text), Convert.ToString(TxtUsernameOperador.Text), Convert.ToString(TxtPasswordOperador.Text), Convert.ToString(TxtNombresOperador.Text), Convert.ToString(TxtApellidosOperador.Text), Convert.ToString(CmbGeneroOperador.SelectedValue), Convert.ToString(CmbEstadoOperador.SelectedValue), Convert.ToString(CmbTipoOperador.SelectedValue), Convert.ToString(TxtTelefonoOperador.Text), Convert.ToString(TxtMovilOperador.Text), Convert.ToString(TxtEmailOperador.Text), Convert.ToString(TxtCiudadOperador.Text), Convert.ToString(TxtDireccionOperador.Text));
+                   VaciarCampos();
+                   InhabilitarTexto();
+            }
+            else
+            {
+                MessageBox.Show("Formato de correo no Valido", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+
+
+			foreach (DataGridViewRow Rows in Dgregistrar.Rows)
+                {
+
+                    for (i = 0; i <= Dgregistrar.Rows.Count - 1; i++)
+                    {
+					while (DgDetallesFactura[i, 0].Value != null)
+                {
+
+---------------------------------------------------------------------------------------------------------------------------------
+				if (Convert.ToString(DgViewFactura[i, 0].Value) == "")
+                    {
+                        MessageBox.Show("Para registrar un usuario agregue los datos requeridos en la grilla,pulsando el boton agregar");
+                    }
+                    else if (facturacion.Guardarfactura(DgFactura) && facturacion.GuardarDetallefactura(DgDetallesFactura))
+                    {
+                        MessageBox.Show("Factura guardada exitosamente", "Facturacion exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Limpiar();
+                    }
+                     else if (fun.GuardarControlFactura(Convert.ToString(Txtnofac.Text), Convert.ToString(LblDocumento.Text), Convert.ToString(Lblpc.Text)))
+                     {
+
+                         Lblestado.Text = "Estado:Control Actualizado";
+                     }
+                   
+                    else
+                    {
+                        MessageBox.Show("No pudo guardarse la factura", "Facturacion Fallida", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        Lblestado.Text = "Estado:No se pudo actualizar los registros ";
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "No pudo guardarse la factura");
+                   
+-----------------------------------------------------------------------------------------------------------------------------------
+
+                   bd.Conectar();   
+                    bd.CrearComando("INSERTARDETALLE", CommandType.StoredProcedure);
+                    bd.Asignarparametro("@NOFACTURA", SqlDbType.VarChar, DgDetallesFactura.Rows[i].Cells[0].Value.ToString());
+                    bd.Asignarparametro("@IDPRODUCTO", SqlDbType.Int, DgDetallesFactura.Rows[i].Cells[1].Value.ToString());
+                    bd.Asignarparametro("@IDMARCA", SqlDbType.VarChar, DgDetallesFactura.Rows[i].Cells[2].Value.ToString());
+                    bd.Asignarparametro("@PRECIO", SqlDbType.NVarChar, DgDetallesFactura.Rows[i].Cells[3].Value.ToString());
+                    bd.Asignarparametro("@DESCUENTO", SqlDbType.Int, DgDetallesFactura.Rows[i].Cells[4].Value.ToString());
+                    bd.Asignarparametro("@CANTIDAD", SqlDbType.NVarChar, DgDetallesFactura.Rows[i].Cells[5].Value.ToString());
+                    int reg = 0;
+                    reg = bd.Ejecutarcomando();
+                    if (reg > 0)
+                    {
+                        guardar = true;
+                    }

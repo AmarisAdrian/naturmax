@@ -1,0 +1,4 @@
+C:\Users\Adrian Amaris\Desktop\ProyectoFormar\AccesoDatos\bin\x86\Debug\AccesoDatos.dll
+C:\Users\Adrian Amaris\Desktop\ProyectoFormar\AccesoDatos\bin\x86\Debug\AccesoDatos.pdb
+C:\Users\Adrian Amaris\Desktop\ProyectoFormar\AccesoDatos\obj\x86\Debug\AccesoDatos.dll
+C:\Users\Adrian Amaris\Desktop\ProyectoFormar\AccesoDatos\obj\x86\Debug\AccesoDatos.pdb

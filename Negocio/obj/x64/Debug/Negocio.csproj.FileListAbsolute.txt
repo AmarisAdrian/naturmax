@@ -1,0 +1,8 @@
+C:\Users\Adrian Amaris\Desktop\ProyectoFormar\Negocio\bin\x64\Debug\Negocio.dll
+C:\Users\Adrian Amaris\Desktop\ProyectoFormar\Negocio\bin\x64\Debug\Negocio.pdb
+C:\Users\Adrian Amaris\Desktop\ProyectoFormar\Negocio\bin\x64\Debug\AccesoDatos.dll
+C:\Users\Adrian Amaris\Desktop\ProyectoFormar\Negocio\bin\x64\Debug\WebCam_Capture.dll
+C:\Users\Adrian Amaris\Desktop\ProyectoFormar\Negocio\bin\x64\Debug\AccesoDatos.pdb
+C:\Users\Adrian Amaris\Desktop\ProyectoFormar\Negocio\obj\x64\Debug\Negocio.csprojResolveAssemblyReference.cache
+C:\Users\Adrian Amaris\Desktop\ProyectoFormar\Negocio\obj\x64\Debug\Negocio.dll
+C:\Users\Adrian Amaris\Desktop\ProyectoFormar\Negocio\obj\x64\Debug\Negocio.pdb
